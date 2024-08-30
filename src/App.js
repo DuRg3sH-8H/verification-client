@@ -51,7 +51,7 @@ function App() {
       return;
     }
     try {
-      const response = await axios.post('verification-api-production.up.railway.app/verify', { code });
+      const response = await axios.post('verification-api-production.up.railway.app:8080/verify', { code });
       if (response.status === 200) {
         window.location.href = '/success';
       }
